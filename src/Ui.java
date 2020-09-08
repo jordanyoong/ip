@@ -1,6 +1,8 @@
-package duke;
-
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Ui {
@@ -13,7 +15,7 @@ public class Ui {
      */
     public void chat() throws DukeException, IOException {
         // Initialize Bot and print Welcome Message
-        String start = "Hello! I'm duke.Duke \nWhat can I do for you?";
+        String start = "Hello! I'm Duke \nWhat can I do for you?";
         System.out.println(start);
 
         // Get relative directory & init

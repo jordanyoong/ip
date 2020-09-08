@@ -1,12 +1,9 @@
-import duke.Storage;
-import duke.Task;
-import duke.Todo;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DukeTest {
     @Test
@@ -17,7 +14,7 @@ public class DukeTest {
             Storage file = new Storage(textDir);
             Todo test = new Todo("read book");
             ArrayList<Task> arr = file.load();
-            //assertEquals(arr.get(0).toString(), (new Todo("read book")).toString());
+            assertEquals(arr.get(0).toString(), (new Todo("read book")).toString());
         } catch (IOException e) {
             System.out.println("Fail");
         }
